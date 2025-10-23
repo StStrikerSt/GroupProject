@@ -5,14 +5,20 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
 
-    float playerspeed = 1f;
-    float jumpspeed = 50f;
+    public float playerspeed = 10f;
+    public float jumpspeed = 200f;
     public bool isonground;
     public Rigidbody rb;
+    public Animator animator;
+    bool ismoving;
+    bool isfacingRight;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        isfacingRight = true;
     }
 
     // Update is called once per frame
@@ -20,6 +26,8 @@ public class playerMovement : MonoBehaviour
     {
         playerMove();
         PlayerJump();
+        animator = gameObject.GetComponent<Animator>();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,15 +40,23 @@ public class playerMovement : MonoBehaviour
 
     private void playerMove()
     {
-        if(Input.GetKey("d"))
+        if(Input.GetKeyDown("d"))
         {
-            transform.Translate(playerspeed, 0, 0);
+            rb.velocity = new Vector3(playerspeed, 0, 0);
+            animator.SetBool("ismoving", true);
+            
         }
-        else if(Input.GetKey("a"))
+        else if(Input.GetKeyDown("a"))
         {
-            transform.Translate(-playerspeed, 0, 0);
+            
+            rb.velocity = new Vector3(-playerspeed, 0, 0);
+            animator.SetBool("ismoving", true);
+            
         }
-        
+        else
+        {
+            animator.SetBool("ismoving", false);
+        }
     
     
     }
@@ -53,9 +69,12 @@ public class playerMovement : MonoBehaviour
             {
                 rb.AddForce(new Vector3(0, jumpspeed,0), ForceMode.Impulse);
                 isonground=false;
+                animator.SetBool("ismoving", true);
             }
-            
-        
+           
+
+
+
     }
 
 
