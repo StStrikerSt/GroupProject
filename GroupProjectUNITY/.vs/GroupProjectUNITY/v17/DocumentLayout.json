@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{B7F348D4-9277-7FEC-3AF4-764AD6A93DE2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7F348D4-9277-7FEC-3AF4-764AD6A93DE2}|Assembly-CSharp.csproj|c:\\groupproject\\groupprojectunity\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B7F348D4-9277-7FEC-3AF4-764AD6A93DE2}|Assembly-CSharp.csproj|C:\\GroupProject\\GroupProjectUNITY\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7F348D4-9277-7FEC-3AF4-764AD6A93DE2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -22,8 +22,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Movetest.cs",
               "ToolTip": "C:\\GroupProject\\GroupProjectUNITY\\Assets\\Scripts\\Movetest.cs",
               "RelativeToolTip": "Assets\\Scripts\\Movetest.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwC0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T11:44:36.353Z",
               "EditorCaption": ""
@@ -45,14 +49,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\playerMovement.cs",
               "ToolTip": "C:\\GroupProject\\GroupProjectUNITY\\Assets\\Scripts\\playerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\playerMovement.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBQAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwBQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-21T17:05:54.529Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",

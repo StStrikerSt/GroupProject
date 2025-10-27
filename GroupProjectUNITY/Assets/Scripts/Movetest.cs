@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movetest : MonoBehaviour
@@ -9,7 +10,7 @@ public class Movetest : MonoBehaviour
     Rigidbody rb;
     Animator animator;
     bool facingRight;
-    bool grounded = false;
+    public bool grounded = false;
     public float JumpHeight;
     
     // Start is called before the first frame update
@@ -26,20 +27,47 @@ public class Movetest : MonoBehaviour
         
     }
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == ("Ground"))
+        {
+            grounded = true;
+        }
+    }
     private void FixedUpdate()
     {
         float move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector3(move * runspeed, rb.velocity.y, 0);
 
-        if(move>0 && !facingRight)
+        if(grounded && Input.GetAxis("Jump")>0)
         {
-            flip();
-        }
-        else if(move<0 && facingRight)
-        {
-            flip();
+            rb.AddForce(new Vector3(0, JumpHeight, 0));
+            grounded = false;
         }
 
+        if(move>0 || move<0)
+        {
+            animator.SetBool("ismoving", true);
+        }
+        else if(move == 0)
+        {
+            animator.SetBool("ismoving", false);
+        }
+
+
+        if (move > 0 && !facingRight)
+        {
+
+            flip();
+
+        }
+        else if (move < 0 && facingRight)
+        {
+            flip();
+
+        }
+       
     }
 
     private void flip()
